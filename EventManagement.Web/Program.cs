@@ -4,10 +4,9 @@ using Microsoft.AspNetCore.Identity;
 using EventManagement.Persistence.UnitOfWorks;
 using EventManagement.Application.Interfaces;
 using EventManagement.Web.Mapping;
+
 var builder = WebApplication.CreateBuilder(args);
 
-
-// Add services to the container.
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
